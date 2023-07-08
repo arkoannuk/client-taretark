@@ -3,11 +3,11 @@ import headerAttributes from './components/HeaderResponsive/attributes.json';
 import { HeroContentLeft } from './components/HeroContentLeft/HeroContentLeft';
 import { FeaturesImages } from './components/FeaturesImages/FeaturesImages';
 import featureAttributes from './components/FeaturesImages/attributes.json';
-import { Slideshow } from './components/Slideshow/Slideshow';
+// import { Slideshow } from './components/Slideshow/Slideshow';
 import { FooterLinks } from './components/FooterLinks/FooterLinks';
 import footerAttributes from './components/FooterLinks/attributes.json';
 import { CardsCarousel } from './components/CardsCarousel/CardsCarousel';
-import carouselAttributes from './components/CardsCarousel/attributes.json'
+// import carouselAttributes from './components/CardsCarousel/attributes.json'
 import { LeadGrid } from './components/LeadGrid/LeadGrid';
 
 function App() {

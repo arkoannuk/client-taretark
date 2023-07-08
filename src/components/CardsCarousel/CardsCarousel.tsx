@@ -1,6 +1,6 @@
 import { Carousel } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
-import { createStyles, Paper, Text, Title, Button, useMantineTheme, rem, Container } from '@mantine/core';
+import { createStyles, Paper, Text, Title, useMantineTheme, rem, Container } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   card: {
