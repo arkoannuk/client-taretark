@@ -8,15 +8,17 @@ import { FooterLinks } from './components/FooterLinks/FooterLinks';
 import footerAttributes from './components/FooterLinks/attributes.json';
 import { CardsCarousel } from './components/CardsCarousel/CardsCarousel';
 import carouselAttributes from './components/CardsCarousel/attributes.json'
+import { LeadGrid } from './components/LeadGrid/LeadGrid';
 
 function App() {
   return (
     <>
       <HeaderResponsive links={headerAttributes.props.links} />
       <HeroContentLeft />
-      <CardsCarousel />
       <FeaturesImages supTitle={featureAttributes.props.supTitle} description={featureAttributes.props.description} data={featureAttributes.props.data} />
-      <Slideshow />
+      <LeadGrid />
+      <CardsCarousel />
+      {/* <Slideshow /> */}
       <FooterLinks data={footerAttributes.props.data} />
     </>
   )

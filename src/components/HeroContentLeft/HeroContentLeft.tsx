@@ -4,7 +4,7 @@ const useStyles = createStyles((theme) => ({
   hero: {
     position: 'relative',
     backgroundImage:
-      'url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)',
+      'url(https://images.pexels.com/photos/975416/pexels-photo-975416.jpeg?cs=srgb&dl=pexels-dsd-975416.jpg&fm=jpg&w=5171&h=3447)',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },
@@ -72,14 +72,15 @@ export function HeroContentLeft() {
         zIndex={0}
       />
       <Container className={classes.container}>
-        <Title className={classes.title}>A fully featured React components library</Title>
+        <Title className={classes.title}>Accommodation in Elva</Title>
         <Text className={classes.description} size="xl" mt="xl">
-          Build fully functional accessible web applications faster than ever – Mantine includes
-          more than 120 customizable components and hooks to cover you in any situation
+          Create lasting memories and experience Estonian hospitality. Make new connections, and feel at home away from home. 
+          Book now to embark on a journey of  exploration.
+          <br></br>Welcome to TareTark.
         </Text>
 
         <Button variant="gradient" size="xl" radius="xl" className={classes.control}>
-          Get started
+          Browse Rooms
         </Button>
       </Container>
     </div>

@@ -4,29 +4,33 @@ import { createStyles, Paper, Text, Title, Button, useMantineTheme, rem, Contain
 
 const useStyles = createStyles((theme) => ({
   card: {
-    height: rem(440),
+    height: rem(220),
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'flex-start',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+
+    [theme.fn.smallerThan('md')]: {
+      height: rem(280),
+    },
   },
 
   title: {
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontWeight: 900,
-    color: theme.white,
+    fontWeight: 450,
     lineHeight: 1.2,
-    fontSize: rem(32),
+    fontSize: rem(18),
     marginTop: theme.spacing.xs,
+    textAlign: 'center',
   },
 
   category: {
-    color: theme.white,
     opacity: 0.7,
     fontWeight: 700,
     textTransform: 'uppercase',
+    textAlign: 'center',
   },
 
   container: {
@@ -47,73 +51,53 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface CardProps {
-  image: string;
   title: string;
   category: string;
 }
 
-function Card({ image, title, category }: CardProps) {
+function Card({title, category }: CardProps) {
   const { classes } = useStyles();
 
   return (
     <Paper
-      shadow="md"
-      p="xl"
-      radius="md"
-      sx={{ backgroundImage: `url(${image})` }}
       className={classes.card}
     >
       <div>
-        <Text className={classes.category} size="xs">
+        <Text ml={23} className={classes.category} size="xs">
           {category}
         </Text>
-        <Title order={3} className={classes.title}>
+        <Title mx={45} order={3} className={classes.title}>
           {title}
         </Title>
       </div>
-      <Button variant="white" color="dark">
-        Read article
-      </Button>
     </Paper>
   );
 }
 
 const data = [
   {
-    image:
-      'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Best forests to visit in North America',
-    category: 'nature',
+    title: 'We had such an enjoyable stay here - the pictures don’t do it justice! The surroundings and interior are really lovely - we especially liked the bathroom. The weather was hot on some nights so the air conditioning was very welcome. Arko communicated with us extremely well and we would be very happy to stay here again!',
+    category: 'Adela & John – 2023 June',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Hawaii beaches review: better than you think',
-    category: 'beach',
+    title: "Arko's place is incredibly cosy and if you're not careful, you might struggle to make the already generous checkout time. The sauna, although modest in size, rapidly gets up to a scorching temperature which makes for a perfect opportunity to cool yourself down in the pond - even better if it's frozen over with a hole cut through the ice!",
+    category: 'Siim – 2022 December',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Mountains at night: 12 best locations to enjoy the view',
-    category: 'nature',
+    title: 'Very nice studio and host in a quiet street near all essential stores and good restaurants. Also the lakes and forests are gorgeous! Thanks Arko and family for shoveling the snow everyday and giving us chocolat 👍',
+    category: 'Michiel - 2022 February',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Aurora in Norway: when to visit for best experience',
-    category: 'nature',
+    title: "Super location, nice view! Very beautiful and big shower. A couple of steps from the studio is a sauna. I loved it that there was a big bed, and needless to say the chill area with a couch and TV. Large windows, with private views of the outdoors. Nice to meet you, we felt so welcomed!!",
+    category: 'Gristel - 2022 February',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Best places to visit this winter',
-    category: 'tourism',
+    title: 'Host was very friendly, explained everything what and were can be found. Place was clean and with access to pond. Personal parking spot. Loved that outside tub and would definitely suggest it. Easy communication before the arrival.',
+    category: 'Mārtiņš - 2021 August',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1582721478779-0ae163c05a60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
-    title: 'Active volcanos reviews: travel at your own risk',
-    category: 'nature',
+    title: 'This place is amazing!! Totally recommend! Location is super, just a few minutes from center and the place itself was very beautiful with big garden! The hosts were such a nice people! They really were spreading positive energy to us and we just loved them and the place :) ! Thank you so much!',
+    category: 'Birgit - 2019 July',
   },
 ];
 
@@ -127,12 +111,12 @@ export function CardsCarousel() {
   ));
 
   return (
-    <Container mt={16}>
+    <Container pt={80} pb={50}>
       <Carousel
         slideSize="50%"
-        breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: rem(2) }]}
-        slideGap="xl"
-        align="start"
+        breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: rem(0) }]}
+        slideGap="xs"
+        align="center"
         slidesToScroll={mobile ? 1 : 2}
       >
         {slides}

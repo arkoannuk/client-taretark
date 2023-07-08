@@ -18,6 +18,11 @@ const useStyles = createStyles((theme) => ({
   root: {
     position: 'relative',
     zIndex: 1,
+
+    [theme.fn.smallerThan('sm')]: {
+      position: 'sticky',
+      zIndex: 9999,
+    },
   },
 
   dropdown: {
