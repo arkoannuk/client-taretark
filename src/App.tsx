@@ -3,12 +3,14 @@ import headerAttributes from './components/HeaderResponsive/attributes.json';
 import { HeroContentLeft } from './components/HeroContentLeft/HeroContentLeft';
 import { FeaturesImages } from './components/FeaturesImages/FeaturesImages';
 import featureAttributes from './components/FeaturesImages/attributes.json';
-// import { Slideshow } from './components/Slideshow/Slideshow';
+import { Slideshow } from './components/Slideshow/Slideshow';
 import { FooterLinks } from './components/FooterLinks/FooterLinks';
 import footerAttributes from './components/FooterLinks/attributes.json';
 import { CardsCarousel } from './components/CardsCarousel/CardsCarousel';
-// import carouselAttributes from './components/CardsCarousel/attributes.json'
+import carouselAttributes from './components/CardsCarousel/attributes.json'
 import { LeadGrid } from './components/LeadGrid/LeadGrid';
+import { HeroTitle } from './components/HeroTitle/HeroTitle';
+import { EmailBanner } from './components/EmailBanner/EmailBanner';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <LeadGrid />
       <CardsCarousel />
       {/* <Slideshow /> */}
+      <EmailBanner />  
+      <HeroTitle />
       <FooterLinks data={footerAttributes.props.data} />
     </>
   )

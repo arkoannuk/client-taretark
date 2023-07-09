@@ -13,7 +13,7 @@ const useStyles = createStyles((theme) => ({
     backgroundPosition: 'center',
 
     [theme.fn.smallerThan('md')]: {
-      height: rem(280),
+      height: rem(320),
     },
   },
 

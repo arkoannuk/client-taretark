@@ -10,7 +10,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   container: {
-    height: rem(700),
+    height: rem(500),
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
@@ -54,7 +54,7 @@ const useStyles = createStyles((theme) => ({
 
   control: {
     marginTop: `calc(${theme.spacing.xl} * 1.5)`,
-
+    height: rem(54),
     [theme.fn.smallerThan('sm')]: {
       width: '100%',
     },
@@ -79,8 +79,8 @@ export function HeroContentLeft() {
           <br></br>Welcome to TareTark.
         </Text>
 
-        <Button variant="gradient" size="xl" radius="xl" className={classes.control}>
-          Browse Rooms
+        <Button variant="gradient" size="xl" className={classes.control}>
+          View Rooms
         </Button>
       </Container>
     </div>
