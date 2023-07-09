@@ -18,7 +18,6 @@ function App() {
       <FeaturesImages supTitle={featureAttributes.props.supTitle} description={featureAttributes.props.description} data={featureAttributes.props.data} />
       <LeadGrid />
       <CardsCarousel />
-      {/* <Slideshow /> */}
       <EmailBanner />  
       <HeroTitle />
       <FooterLinks data={footerAttributes.props.data} />

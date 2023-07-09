@@ -74,7 +74,7 @@ export function EmailBanner() {
             Subscribe to our Newsletter
           </Text>
           <Text fz="sm" c="dimmed">
-            You will never miss out on discount deals, property updates and local events. We only send out news once every few months.
+            You will never miss out on discount deals, property updates and local events. We only send out emails once every few months.
           </Text>
           <div className={classes.controls}>
             <TextInput
@@ -84,7 +84,7 @@ export function EmailBanner() {
             <Button className={classes.control}>Subscribe</Button>
           </div>
           <Text fz="sm" c="dimmed">
-            If you wish to contact us, <a href="">click here</a>
+            For contact information, <a href="">click here</a>
           </Text>
         </div>
         <Image src={image} className={classes.image} />

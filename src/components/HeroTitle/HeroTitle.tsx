@@ -96,7 +96,6 @@ export function HeroTitle() {
             size="xl"
             className={classes.control}
             variant="gradient"
-            gradient={{ from: 'blue', to: 'cyan' }}
           >
             Guidebook
           </Button>
