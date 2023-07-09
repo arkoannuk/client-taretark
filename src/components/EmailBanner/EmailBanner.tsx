@@ -1,4 +1,4 @@
-import { createStyles, Text, Title, TextInput, Button, Image, rem, Container } from '@mantine/core';
+import { createStyles, Text, TextInput, Button, Image, rem, Container } from '@mantine/core';
 import image from './image.svg';
 
 const useStyles = createStyles((theme) => ({
