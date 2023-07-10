@@ -92,7 +92,7 @@ export function EmailBanner() {
                 placeholder="Your email"
                 classNames={{ input: classes.input, root: classes.inputWrapper }}
               />
-              <Button className={classes.control}>Subscribe</Button>
+              <Button variant="gradient" className={classes.control}>Subscribe</Button>
             </div>
             <Text fz="sm" c="dimmed">
               For contact information, <a href="">click here</a>

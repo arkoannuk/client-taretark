@@ -9,18 +9,21 @@ import { CardsCarousel } from './components/CardsCarousel/CardsCarousel';
 import { LeadGrid } from './components/LeadGrid/LeadGrid';
 import { HeroTitle } from './components/HeroTitle/HeroTitle';
 import { EmailBanner } from './components/EmailBanner/EmailBanner';
+import MantineThemeProvider from './theme';
 
 function App() {
   return (
     <>
-      <HeaderResponsive links={headerAttributes.props.links} />
-      <HeroContentLeft />
-      <FeaturesImages supTitle={featureAttributes.props.supTitle} description={featureAttributes.props.description} data={featureAttributes.props.data} />
-      <LeadGrid />
-      <CardsCarousel />
-      <EmailBanner />  
-      <HeroTitle />
-      <FooterLinks data={footerAttributes.props.data} />
+      <MantineThemeProvider>
+        <HeaderResponsive links={headerAttributes.props.links} />
+        <HeroContentLeft />
+        <FeaturesImages supTitle={featureAttributes.props.supTitle} description={featureAttributes.props.description} data={featureAttributes.props.data} />
+        <LeadGrid />
+        <CardsCarousel />
+        <EmailBanner />
+        <HeroTitle />
+        <FooterLinks data={footerAttributes.props.data} />
+      </MantineThemeProvider>
     </>
   )
 }
