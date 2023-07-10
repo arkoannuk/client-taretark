@@ -90,27 +90,26 @@ export function FeaturesImages({ supTitle, description, data }: FeaturesImagesPr
   ));
 
   return (
-    <Container size={700} className={classes.wrapper}>
-      <Text className={classes.supTitle}>{supTitle}</Text>
 
-      <Title className={classes.title} order={2}>
-        PharmLand is <span className={classes.highlight}>not</span> just for pharmacists
-      </Title>
-
-      <Container size={660} p={0}>
-        <Text color="dimmed" className={classes.description}>
-          {description}
-        </Text>
+      <Container size={700} className={classes.wrapper}>
+        <Text className={classes.supTitle}>{supTitle}</Text>
+        <Title className={classes.title} order={2}>
+          PharmLand is <span className={classes.highlight}>not</span> just for pharmacists
+        </Title>
+        <Container size={660} p={0}>
+          <Text color="dimmed" className={classes.description}>
+            {description}
+          </Text>
+        </Container>
+        <SimpleGrid
+          cols={2}
+          spacing={50}
+          breakpoints={[{ maxWidth: 550, cols: 1, spacing: 40 }]}
+          style={{ marginTop: 30 }}
+        >
+          {items}
+        </SimpleGrid>
       </Container>
 
-      <SimpleGrid
-        cols={2}
-        spacing={50}
-        breakpoints={[{ maxWidth: 550, cols: 1, spacing: 40 }]}
-        style={{ marginTop: 30 }}
-      >
-        {items}
-      </SimpleGrid>
-    </Container>
   );
 }

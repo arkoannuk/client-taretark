@@ -2,6 +2,14 @@ import { createStyles, Text, TextInput, Button, Image, rem, Container } from '@m
 import image from './image.svg';
 
 const useStyles = createStyles((theme) => ({
+  topWrapper: {
+    paddingTop: `calc(${theme.spacing.xl} * 2)`,
+    paddingBottom: `calc(${theme.spacing.xl} * 2)`,
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+    borderTop: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
+      }`,
+  },
+
   wrapper: {
     display: 'flex',
     alignItems: 'center',
@@ -67,28 +75,30 @@ const useStyles = createStyles((theme) => ({
 export function EmailBanner() {
   const { classes } = useStyles();
   return (
-    <Container pb={50}>
-      <div className={classes.wrapper}>
-        <div className={classes.body}>
-          <Text fw={900} fz="xl" mb={5}>
-            Subscribe to our Newsletter
-          </Text>
-          <Text fz="sm" c="dimmed">
-            You will never miss out on discount deals, property updates and local events. We only send out emails once every few months.
-          </Text>
-          <div className={classes.controls}>
-            <TextInput
-              placeholder="Your email"
-              classNames={{ input: classes.input, root: classes.inputWrapper }}
-            />
-            <Button className={classes.control}>Subscribe</Button>
+    <Container fluid className={classes.topWrapper}>
+      <Container pb={50}>
+        <div className={classes.wrapper}>
+          <div className={classes.body}>
+            <Text fw={900} fz="xl" mb={5}>
+              Subscribe to our Newsletter
+            </Text>
+            <Text fz="sm" c="dimmed">
+              You will never miss out on discount deals, property updates and local events. We only send out emails once every few months.
+            </Text>
+            <div className={classes.controls}>
+              <TextInput
+                placeholder="Your email"
+                classNames={{ input: classes.input, root: classes.inputWrapper }}
+              />
+              <Button className={classes.control}>Subscribe</Button>
+            </div>
+            <Text fz="sm" c="dimmed">
+              For contact information, <a href="">click here</a>
+            </Text>
           </div>
-          <Text fz="sm" c="dimmed">
-            For contact information, <a href="">click here</a>
-          </Text>
+          <Image src={image} className={classes.image} />
         </div>
-        <Image src={image} className={classes.image} />
-      </div>
+      </Container>
     </Container>
   );
 }
