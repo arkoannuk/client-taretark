@@ -3,14 +3,26 @@ import { useMediaQuery } from '@mantine/hooks';
 import { createStyles, Paper, Text, Title, useMantineTheme, rem, Container } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
+
+  wrapper: {
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
+  },
+
+  // topWrapper: {
+  //   backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+  //   borderTop: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]}`,
+  //   borderBottom: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]}`,
+  // },
+
   card: {
-    height: rem(220),
+    height: rem(240),
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'flex-start',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    //   backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
 
     [theme.fn.smallerThan('md')]: {
       height: rem(320),
@@ -33,21 +45,17 @@ const useStyles = createStyles((theme) => ({
     textAlign: 'center',
   },
 
-  container: {
-    height: rem(500),
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-start',
-    paddingBottom: `calc(${theme.spacing.xl} * 6)`,
-    zIndex: 1,
-    position: 'relative',
+  containerTwo: {
+    paddingTop: rem(50),
+    paddingBottom: rem(40),
 
     [theme.fn.smallerThan('sm')]: {
-      height: rem(300),
-      paddingBottom: `calc(${theme.spacing.xl} * 3)`,
+      paddingTop: rem(20),
+      paddingBottom: rem(20),
     },
   },
+
+
 }));
 
 interface CardProps {
@@ -55,7 +63,7 @@ interface CardProps {
   category: string;
 }
 
-function Card({title, category }: CardProps) {
+function Card({ title, category }: CardProps) {
   const { classes } = useStyles();
 
   return (
@@ -102,6 +110,7 @@ const data = [
 ];
 
 export function CardsCarousel() {
+  const { classes } = useStyles();
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
   const slides = data.map((item) => (
@@ -111,7 +120,8 @@ export function CardsCarousel() {
   ));
 
   return (
-    <Container pt={80} pb={50}>
+    //    <Container fluid className={classes.topWrapper}>
+    <Container px={0} className={classes.containerTwo}>
       <Carousel
         slideSize="50%"
         breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: rem(0) }]}
@@ -122,5 +132,6 @@ export function CardsCarousel() {
         {slides}
       </Carousel>
     </Container>
+    //    </Container>
   );
 }

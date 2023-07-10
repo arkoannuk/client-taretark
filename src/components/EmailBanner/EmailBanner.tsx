@@ -3,8 +3,8 @@ import image from './image.svg';
 
 const useStyles = createStyles((theme) => ({
   topWrapper: {
-    paddingTop: `calc(${theme.spacing.xl} * 2)`,
-    paddingBottom: `calc(${theme.spacing.xl} * 2)`,
+    paddingTop: rem(50),
+    paddingBottom: rem(50),
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
     borderTop: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
       }`,
@@ -76,7 +76,7 @@ export function EmailBanner() {
   const { classes } = useStyles();
   return (
     <Container fluid className={classes.topWrapper}>
-      <Container pb={50}>
+      <Container pb={0} pt={0} px={0}>
         <div className={classes.wrapper}>
           <div className={classes.body}>
             <Text fw={900} fz="xl" mb={5}>

@@ -11,8 +11,17 @@ import {
 import IMAGES from './images';
 
 const useStyles = createStyles((theme) => ({
+  // topWrapper: {
+  //   paddingTop: `calc(${theme.spacing.xl} * 2)`,
+  //   paddingBottom: `calc(${theme.spacing.xl} * 2)`,
+  //   backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.blue[0],
+  //   borderBottom: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
+  //     }`,
+  // },
+
+
   wrapper: {
-    paddingTop: rem(80),
+    paddingTop: rem(50),
     paddingBottom: rem(50),
   },
 
@@ -91,6 +100,7 @@ export function FeaturesImages({ supTitle, description, data }: FeaturesImagesPr
 
   return (
 
+//    <Container fluid className={classes.topWrapper}>
       <Container size={700} className={classes.wrapper}>
         <Text className={classes.supTitle}>{supTitle}</Text>
         <Title className={classes.title} order={2}>
@@ -110,6 +120,7 @@ export function FeaturesImages({ supTitle, description, data }: FeaturesImagesPr
           {items}
         </SimpleGrid>
       </Container>
+ //   </Container>
 
   );
 }

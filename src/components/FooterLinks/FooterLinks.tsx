@@ -4,8 +4,8 @@ import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   footer: {
-    paddingTop: `calc(${theme.spacing.xl} * 2)`,
-    paddingBottom: `calc(${theme.spacing.xl} * 2)`,
+    paddingTop: rem(50),
+    paddingBottom: rem(0),
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
     borderTop: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
