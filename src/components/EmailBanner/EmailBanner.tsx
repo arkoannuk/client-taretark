@@ -6,18 +6,20 @@ const useStyles = createStyles((theme) => ({
     paddingTop: rem(50),
     paddingBottom: rem(50),
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-    borderTop: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
-      }`,
+    borderTop: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2] }`,
   },
 
   wrapper: {
     display: 'flex',
     alignItems: 'center',
-    padding: `calc(${theme.spacing.xl} * 2)`,
+    // padding: `calc(${theme.spacing.xl} * 2)`,
+    paddingLeft: `calc(${theme.spacing.xl} * 2)`,
+    paddingRight: `calc(${theme.spacing.xl} * 2)`,
+    paddingTop: rem(25),
+    paddingBottom: rem(25),
     borderRadius: theme.radius.md,
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-    border: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]
-      }`,
+    // backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
+    // border: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]}`,
 
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column-reverse',
