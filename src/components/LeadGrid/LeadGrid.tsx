@@ -1,4 +1,4 @@
-import { Container, Grid, SimpleGrid, Skeleton, useMantineTheme, rem } from '@mantine/core';
+import { Container, Grid, SimpleGrid, Skeleton, useMantineTheme, rem, Image } from '@mantine/core';
 
 const PRIMARY_COL_HEIGHT = rem(350);
 
@@ -9,16 +9,16 @@ export function LeadGrid() {
   return (
     <Container pb={0} pt={0}>
       <SimpleGrid cols={2} spacing="md" breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
-        <Skeleton height={PRIMARY_COL_HEIGHT} radius="md" animate={false} />
+         <Image src='src/components/LeadGrid/result2.jpg' alt='Random image' height={PRIMARY_COL_HEIGHT} radius="md" />
         <Grid gutter="md">
           <Grid.Col>
-            <Skeleton height={SECONDARY_COL_HEIGHT} radius="md" animate={false} />
+             <Image src='src/components/LeadGrid/result3.jpg' alt='Random image' height={SECONDARY_COL_HEIGHT} radius="md" />
           </Grid.Col>
           <Grid.Col span={6}>
-            <Skeleton height={SECONDARY_COL_HEIGHT} radius="md" animate={false} />
+             <Image src='src/components/LeadGrid/image4.jpg' alt='Random image' height={SECONDARY_COL_HEIGHT} radius="md" />
           </Grid.Col>
           <Grid.Col span={6}>
-            <Skeleton height={SECONDARY_COL_HEIGHT} radius="md" animate={false} />
+             <Image src='src/components/LeadGrid/result1.jpg'  alt='Random image' height={SECONDARY_COL_HEIGHT} radius="md" />
           </Grid.Col>
         </Grid>
       </SimpleGrid>
