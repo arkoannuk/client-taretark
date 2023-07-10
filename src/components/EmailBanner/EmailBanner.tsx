@@ -15,15 +15,16 @@ const useStyles = createStyles((theme) => ({
     // padding: `calc(${theme.spacing.xl} * 2)`,
     paddingLeft: `calc(${theme.spacing.xl} * 2)`,
     paddingRight: `calc(${theme.spacing.xl} * 2)`,
-    paddingTop: rem(25),
-    paddingBottom: rem(25),
+    paddingTop: rem(0),
+    paddingBottom: rem(0),
     borderRadius: theme.radius.md,
     // backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
     // border: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]}`,
 
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column-reverse',
-      padding: theme.spacing.xl,
+      paddingLeft: theme.spacing.xl,
+      paddingRight: theme.spacing.xl,
     },
   },
 
