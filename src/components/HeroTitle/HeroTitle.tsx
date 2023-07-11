@@ -4,7 +4,7 @@ const useStyles = createStyles((theme) => ({
   hero: {
     position: 'relative',
     backgroundImage:
-      'url(src/assets/banner2.jpg)',
+      'url(public/assets/banner2.jpg)',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },
