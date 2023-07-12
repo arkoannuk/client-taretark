@@ -14,28 +14,28 @@
     "https://www.flaticon.com/"
   ],
   "props": {
-    "supTitle": "Use cases",
-    "description": "Its lungs contain an organ that creates electricity. The crackling sound of electricity can be heard when it exhales. Azurill’s tail is large and bouncy. It is packed full of the nutrients this Pokémon needs to grow.",
+    "supTitle": "SINCE 2020",
+    "description": "Immerse yourself in nature's embrace, rejuvenating your soul and amplifying inner peace. Enhance your well-being through optional recreational activities, revitalizing your body and mind. Bring along your partner or cherished friends to share this extraordinary experience.",
     "data": [
       {
         "image": "auditors",
-        "title": "Pharmacists",
+        "title": "Sauna & Hot Tub",
         "description": "Azurill can be seen bouncing and playing on its big, rubbery tail"
       },
       {
         "image": "lawyers",
-        "title": "Lawyers",
+        "title": "BBQ",
         "description": "Fans obsess over the particular length and angle of its arms"
       },
       {
         "image": "accountants",
-        "title": "Bank owners",
+        "title": "Host Greets You",
         "description": "They divvy up their prey evenly among the members of their pack"
       },
       {
         "image": "others",
         "title": "Others",
-        "description": "Phanpy uses its long nose to shower itself"
+        "description": "Private parking, firepit, shower ammenities, wifi"
       }
     ]
   },
