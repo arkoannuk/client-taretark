@@ -1,12 +1,14 @@
 import { createStyles, Text, TextInput, Button, Image, rem, Container } from '@mantine/core';
 import image from './image.svg';
+import {FormattedMessage} from 'react-intl'
+import { LanguagePicker } from '../LanguagePicker/LanguagePicker';
 
 const useStyles = createStyles((theme) => ({
   topWrapper: {
     paddingTop: rem(50),
     paddingBottom: rem(50),
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-    borderTop: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2] }`,
+    borderTop: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]}`,
   },
 
   wrapper: {
@@ -83,7 +85,11 @@ export function EmailBanner() {
         <div className={classes.wrapper}>
           <div className={classes.body}>
             <Text fw={900} fz="xl" mb={5}>
-              Subscribe to our Newsletter
+              <FormattedMessage
+              id="kKkhpi"
+                description="emailBannerTitle" // Description should be a string literal
+                defaultMessage="Subscribe to our Newsletter!" // Message should be a string literal
+              />
             </Text>
             <Text fz="sm" c="dimmed">
               You will never miss out on discount deals, property updates and local events. We only send out emails once every few months.
@@ -101,6 +107,7 @@ export function EmailBanner() {
           </div>
           <Image src={image} className={classes.image} />
         </div>
+        <LanguagePicker />
       </Container>
     </Container>
   );

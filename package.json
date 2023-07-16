@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "extract": "formatjs extract",
+    "compile": "formatjs compile"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -31,9 +33,12 @@
     "dayjs": "^1.11.9",
     "embla-carousel-react": "^7.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-intl": "^6.4.4"
   },
   "devDependencies": {
+    "@formatjs/cli": "^6.1.3",
+    "@formatjs/ts-transformer": "^3.13.3",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "@typescript-eslint/eslint-plugin": "^5.61.0",

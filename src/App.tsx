@@ -11,6 +11,7 @@ import { HeroTitle } from './components/HeroTitle/HeroTitle';
 import { EmailBanner } from './components/EmailBanner/EmailBanner';
 import MantineThemeProvider from './theme';
 
+
 function App() {
   return (
     <>
