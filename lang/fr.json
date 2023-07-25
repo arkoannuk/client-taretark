@@ -1,7 +1,5 @@
 {
-    "kKkhpi": {
-      "defaultMessage": "Supprimer de panneau",
-      "description": "emailBannerTitle"
-    }
+  "emailBanner-header": {
+    "defaultMessage": "Supprimer de panneau",
   }
-  
+}

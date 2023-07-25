@@ -5,10 +5,7 @@ import images from './images';
 
 const data = [
   { label: 'English', image: images.english },
-  { label: 'German', image: images.german },
-  { label: 'Italian', image: images.italian },
   { label: 'French', image: images.french },
-  { label: 'Polish', image: images.polish },
 ];
 
 const useStyles = createStyles((theme, { opened }: { opened: boolean }) => ({

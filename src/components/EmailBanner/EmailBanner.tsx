@@ -86,9 +86,8 @@ export function EmailBanner() {
           <div className={classes.body}>
             <Text fw={900} fz="xl" mb={5}>
               <FormattedMessage
-              id="kKkhpi"
-                description="emailBannerTitle" // Description should be a string literal
-                defaultMessage="Subscribe to our Newsletter!" // Message should be a string literal
+              id="emailBanner-header"
+                defaultMessage="Subscribe to our Newsletter!"
               />
             </Text>
             <Text fz="sm" c="dimmed">

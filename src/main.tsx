@@ -7,7 +7,7 @@ import messages_en from "../compiled-lang/en.json";
 import messages_fr from "../compiled-lang/fr.json";
 import { IntlProvider } from 'react-intl';
 
-const language = "en";
+const language = "fr";
 
 const messages = {
   'en': messages_en,
