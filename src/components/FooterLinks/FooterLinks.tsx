@@ -130,7 +130,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
 
   return (
     <footer className={classes.footer}>
-      <Container className={classes.inner}>
+      <Container size="lg" className={classes.inner}>
         <div className={classes.logo}>
           <MantineLogo size={30} />
           <Text size="xs" color="dimmed" className={classes.description}>
@@ -139,7 +139,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>
-      <Container className={classes.afterFooter}>
+      <Container size="lg" className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
           © 2023 TareTark OÜ – All rights reserved.
         </Text>

@@ -71,7 +71,7 @@ export function HeroContentLeft() {
         opacity={1}
         zIndex={0}
       />
-      <Container className={classes.container}>
+      <Container size="lg" className={classes.container}>
         <Title className={classes.title}>Accommodation in Elva</Title>
         <Text className={classes.description} size="xl" mt="xl">
           Create lasting memories and experience Estonian hospitality. Make new connections, and feel at home away from home. 

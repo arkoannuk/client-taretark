@@ -7,11 +7,11 @@ import messages_en from "../compiled-lang/en.json";
 import messages_fr from "../compiled-lang/fr.json";
 import { IntlProvider } from 'react-intl';
 
-const language = "fr";
+const language = "En";
 
 const messages = {
-  'en': messages_en,
-  'fr': messages_fr
+  'En': messages_en,
+  'Fr': messages_fr
 };
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

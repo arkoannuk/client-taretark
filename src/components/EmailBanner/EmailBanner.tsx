@@ -1,7 +1,6 @@
 import { createStyles, Text, TextInput, Button, Image, rem, Container } from '@mantine/core';
 import image from './image.svg';
 import {FormattedMessage} from 'react-intl'
-import { LanguagePicker } from '../LanguagePicker/LanguagePicker';
 
 const useStyles = createStyles((theme) => ({
   topWrapper: {
@@ -31,9 +30,13 @@ const useStyles = createStyles((theme) => ({
   },
 
   image: {
-    maxWidth: '40%',
+    maxWidth: '30%',
 
     [theme.fn.smallerThan('sm')]: {
+      maxWidth: '50%',
+    },
+
+    [theme.fn.smallerThan('xs')]: {
       maxWidth: '100%',
     },
   },
@@ -81,7 +84,7 @@ export function EmailBanner() {
   const { classes } = useStyles();
   return (
     <Container fluid className={classes.topWrapper}>
-      <Container pb={0} pt={0} px={0}>
+      <Container size="lg" pb={0} pt={0} px={0}>
         <div className={classes.wrapper}>
           <div className={classes.body}>
             <Text fw={900} fz="xl" mb={5}>
@@ -106,7 +109,6 @@ export function EmailBanner() {
           </div>
           <Image src={image} className={classes.image} />
         </div>
-        <LanguagePicker />
       </Container>
     </Container>
   );

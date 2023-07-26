@@ -4,17 +4,17 @@ import { IconChevronDown } from '@tabler/icons-react';
 import images from './images';
 
 const data = [
-  { label: 'English', image: images.english },
-  { label: 'French', image: images.french },
+  { label: 'En', image: images.english },
+  { label: 'Fr', image: images.french },
 ];
 
 const useStyles = createStyles((theme, { opened }: { opened: boolean }) => ({
   control: {
-    width: rem(200),
+    width: rem(65),
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
-    padding: `${theme.spacing.xs} ${theme.spacing.md}`,
+    padding: ``,
     borderRadius: theme.radius.md,
     border: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[2]
@@ -41,6 +41,11 @@ const useStyles = createStyles((theme, { opened }: { opened: boolean }) => ({
     transition: 'transform 150ms ease',
     transform: opened ? 'rotate(180deg)' : 'rotate(0deg)',
   },
+
+  dropdown: {
+    
+  }
+
 }));
 
 export function LanguagePicker() {
@@ -49,7 +54,7 @@ export function LanguagePicker() {
   const [selected, setSelected] = useState(data[0]);
   const items = data.map((item) => (
     <Menu.Item
-      icon={<Image src={item.image} width={18} height={18} />}
+      icon={<Image src={item.image} width={20} height={20} />}
       onClick={() => setSelected(item)}
       key={item.label}
     >
@@ -66,15 +71,15 @@ export function LanguagePicker() {
       withinPortal
     >
       <Menu.Target>
-        <UnstyledButton className={classes.control}>
+        <UnstyledButton ml='0.35rem' className={classes.control}>
           <Group spacing="xs">
-            <Image src={selected.image} width={22} height={22} />
-            <span className={classes.label}>{selected.label}</span>
+            <Image src={selected.image} width={25} height={25} />
+            {/* <span className={classes.label}>{selected.label}</span> */}
           </Group>
           <IconChevronDown size="1rem" className={classes.icon} stroke={1.5} />
         </UnstyledButton>
       </Menu.Target>
-      <Menu.Dropdown>{items}</Menu.Dropdown>
+      <Menu.Dropdown className={classes.dropdown}>{items}</Menu.Dropdown>
     </Menu>
   );
 }
