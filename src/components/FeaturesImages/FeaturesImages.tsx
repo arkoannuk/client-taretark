@@ -101,12 +101,12 @@ export function FeaturesImages({ supTitle, description, data }: FeaturesImagesPr
   return (
 
 //    <Container fluid className={classes.topWrapper}>
-      <Container size={700} className={classes.wrapper}>
+      <Container size="md" className={classes.wrapper}>
         <Text className={classes.supTitle}>{supTitle}</Text>
         <Title className={classes.title} order={2}>
           TareTark is <span className={classes.highlight}>not</span> just for overnight stays
         </Title>
-        <Container size={660} p={0}>
+        <Container size="md" p={0}>
           <Text color="dimmed" className={classes.description}>
             {description}
           </Text>

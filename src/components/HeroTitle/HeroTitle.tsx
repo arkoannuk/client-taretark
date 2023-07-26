@@ -13,9 +13,10 @@ const useStyles = createStyles((theme) => ({
     height: rem(350),
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignItems: 'flex-start',
-    paddingBottom: `calc(${theme.spacing.xl} * 3)`,
+    paddingTop: rem(50),
+    paddingBottom: rem(50),
     zIndex: 1,
     position: 'relative',
 
@@ -27,7 +28,7 @@ const useStyles = createStyles((theme) => ({
 
   title: {
     color: theme.white,
-    fontSize: rem(60),
+    fontSize: rem(40),
     fontWeight: 900,
     lineHeight: 1.1,
 
@@ -84,7 +85,7 @@ export function HeroTitle() {
         opacity={1}
         zIndex={0}
       />
-      <Container className={classes.container}>
+      <Container size="lg" className={classes.container}>
         <Title className={classes.title}>Discover Elva with a Guidebook!</Title>
         <Text className={classes.description} size="xl" mt="xl">
         The surrounding location is a hidden gem. For you to get the most ouf your stay, 

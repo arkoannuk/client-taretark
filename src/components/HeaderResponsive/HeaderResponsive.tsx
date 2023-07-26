@@ -11,6 +11,7 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantine/ds';
+import { LanguagePicker } from '../LanguagePicker/LanguagePicker';
 
 const HEADER_HEIGHT = rem(60);
 
@@ -58,6 +59,11 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.largerThan('sm')]: {
       display: 'none',
     },
+  },
+
+  wrapper: {
+    display: 'flex',
+    justifyContent: 'end',
   },
 
   link: {
@@ -114,13 +120,15 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
 
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
-      <Container className={classes.header}>
+      <Container fluid className={classes.header}>
         <MantineLogo size={28} />
-        <Group spacing={5} className={classes.links}>
-          {items}
-        </Group>
-
-        <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
+        <div className={classes.wrapper}>
+          <Group spacing={5} className={classes.links}>
+            {items}
+          </Group>
+          <LanguagePicker />
+          <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" ml='0.5rem'/>
+        </div>
 
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (

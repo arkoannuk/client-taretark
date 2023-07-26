@@ -121,7 +121,7 @@ export function CardsCarousel() {
 
   return (
     //    <Container fluid className={classes.topWrapper}>
-    <Container px={0} className={classes.containerTwo}>
+    <Container size="lg" px={0} className={classes.containerTwo}>
       <Carousel
         slideSize="50%"
         breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: rem(0) }]}
