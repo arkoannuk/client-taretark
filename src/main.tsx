@@ -2,22 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
+import { LanguageProvider} from './contexts/LanguageContext.tsx';
 
-import messages_en from "../compiled-lang/en.json";
-import messages_fr from "../compiled-lang/fr.json";
-import { IntlProvider } from 'react-intl';
-
-const language = "En";
-
-const messages = {
-  'En': messages_en,
-  'Fr': messages_fr
-};
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <IntlProvider locale={navigator.language} messages={messages[language]}>
-      <App />
-    </IntlProvider>
+      <LanguageProvider>
+        <App />
+      </LanguageProvider>
   </React.StrictMode>,
 );
