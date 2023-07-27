@@ -1,6 +1,6 @@
 import { createStyles, Text, TextInput, Button, Image, rem, Container } from '@mantine/core';
 import image from './image.svg';
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 const useStyles = createStyles((theme) => ({
   topWrapper: {
@@ -14,8 +14,8 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     // padding: `calc(${theme.spacing.xl} * 2)`,
-    paddingLeft: `calc(${theme.spacing.xl} * 2)`,
-    paddingRight: `calc(${theme.spacing.xl} * 2)`,
+    // paddingLeft: `calc(${theme.spacing.xl} * 2)`,
+    // paddingRight: `calc(${theme.spacing.xl} * 2)`,
     paddingTop: rem(0),
     paddingBottom: rem(0),
     borderRadius: theme.radius.md,
@@ -24,8 +24,8 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column-reverse',
-      paddingLeft: theme.spacing.xl,
-      paddingRight: theme.spacing.xl,
+      // paddingLeft: theme.spacing.xl,
+      // paddingRight: theme.spacing.xl,
     },
   },
 
@@ -82,34 +82,35 @@ const useStyles = createStyles((theme) => ({
 
 export function EmailBanner() {
   const { classes } = useStyles();
+
   return (
-    <Container fluid className={classes.topWrapper}>
-      <Container size="lg" pb={0} pt={0} px={0}>
-        <div className={classes.wrapper}>
-          <div className={classes.body}>
-            <Text fw={900} fz="xl" mb={5}>
-              <FormattedMessage
-              id="emailBanner-header"
-                defaultMessage="Subscribe to our Newsletter!"
-              />
-            </Text>
-            <Text fz="sm" c="dimmed">
-              You will never miss out on discount deals, property updates and local events. We only send out emails once every few months.
-            </Text>
-            <div className={classes.controls}>
-              <TextInput
-                placeholder="Your email"
-                classNames={{ input: classes.input, root: classes.inputWrapper }}
-              />
-              <Button variant="gradient" className={classes.control}>Subscribe</Button>
+      <Container fluid className={classes.topWrapper}>
+        <Container size="lg" pb={0} pt={0} px={0}>
+          <div className={classes.wrapper}>
+            <div className={classes.body}>
+              <Text fw={900} fz="xl" mb={5}>
+                <FormattedMessage
+                  id="emailBanner-header"
+                  defaultMessage="Subscribe to our Newsletter!"
+                />
+              </Text>
+              <Text fz="sm" c="dimmed">
+                You will never miss out on discount deals, property updates and local events. We only send out emails once every few months.
+              </Text>
+              <div className={classes.controls}>
+                <TextInput
+                  placeholder="Your email"
+                  classNames={{ input: classes.input, root: classes.inputWrapper }}
+                />
+                <Button variant="gradient" className={classes.control}>Subscribe</Button>
+              </div>
+              <Text fz="sm" c="dimmed">
+                For contact information, <a href="">click here</a>
+              </Text>
             </div>
-            <Text fz="sm" c="dimmed">
-              For contact information, <a href="">click here</a>
-            </Text>
+            <Image src={image} className={classes.image} />
           </div>
-          <Image src={image} className={classes.image} />
-        </div>
+        </Container>
       </Container>
-    </Container>
   );
 }
