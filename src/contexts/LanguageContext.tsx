@@ -16,6 +16,8 @@ export function useLanguageContext() {
   return useContext(LanguageContext);
 }
 
+
+
 // Provider component to wrap your app with
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   // Set the initial value here, for example 'En' for English

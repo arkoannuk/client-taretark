@@ -1,5 +1,8 @@
 {
   "emailBanner-header": {
-    "defaultMessage": "Supprimer de panneau"
+    "defaultMessage": "Abonnez-vous à notre newsletter"
+  },
+  "heroContentLeft-title": {
+    "defaultMessage": "Hébergement à Elva"
   }
 }

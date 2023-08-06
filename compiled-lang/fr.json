@@ -2,7 +2,13 @@
   "emailBanner-header": [
     {
       "type": 0,
-      "value": "Supprimer de panneau"
+      "value": "Abonnez-vous à notre newsletter"
+    }
+  ],
+  "heroContentLeft-title": [
+    {
+      "type": 0,
+      "value": "Hébergement à Elva"
     }
   ]
 }

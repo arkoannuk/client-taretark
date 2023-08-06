@@ -14,10 +14,11 @@
   ],
   "props": {
     "links": [
-      { "link": "/rooms", "label": "Rooms" },
-      { "link": "/booking", "label": "Booking" },
-      { "link": "/faqs", "label": "FAQs" },
-      { "link": "/contact", "label": "Contact" }
+      { "link": "/", "label": "Home", "labelFr": "Maison"  },
+      { "link": "/rooms", "label": "Rooms", "labelFr": "Pièces"  },
+      { "link": "/booking", "label": "Booking", "labelFr": "Réservation"  },
+      { "link": "/contact-faq", "label": "Contact & FAQ", "labelFr": "Contactez & FAQ"  },
+      { "link": "/error", "label": "Error", "labelFr": "Erreur" }
     ]
   },
   "canvas": {
