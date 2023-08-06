@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { createStyles, UnstyledButton, Menu, Image, Group, rem } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons-react';
 import images from './images';
@@ -52,8 +52,16 @@ export function LanguagePicker() {
   const [opened, setOpened] = useState(false);
   const { classes } = useStyles({ opened });
   const { setSelectedLabel } = useLanguageContext();
+  const { selectedLabel } = useLanguageContext();
   const [selected, setSelected] = useState(data[0]);
   
+  useEffect(() => {
+    const selectedItem = data.find(item => item.label === selectedLabel);
+    if (selectedItem) {
+      setSelected(selectedItem);
+    }
+  }, [selectedLabel]);
+
   const items = data.map((item) => (
     <Menu.Item
       icon={<Image src={item.image} width={20} height={20} />}

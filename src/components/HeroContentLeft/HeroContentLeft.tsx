@@ -1,4 +1,5 @@
 import { createStyles, Overlay, Container, Title, Button, Text, rem } from '@mantine/core';
+import { FormattedMessage } from 'react-intl';
 
 const useStyles = createStyles((theme) => ({
   hero: {
@@ -72,9 +73,13 @@ export function HeroContentLeft() {
         zIndex={0}
       />
       <Container size="lg" className={classes.container}>
-        <Title className={classes.title}>Accommodation in Elva</Title>
+        <Title className={classes.title}><FormattedMessage
+            id="heroContentLeft-title"
+            defaultMessage="Accommodation in Elva"
+          />
+        </Title>
         <Text className={classes.description} size="xl" mt="xl">
-          Create lasting memories and experience Estonian hospitality. Make new connections, and feel at home away from home. 
+          Create lasting memories and experience Estonian hospitality. Make new connections, and feel at home away from home.
           Book now to embark on a journey of  exploration.
           <br></br>Welcome to TareTark.
         </Text>

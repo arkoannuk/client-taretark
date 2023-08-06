@@ -12,6 +12,9 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantine/ds';
 import { LanguagePicker } from '../LanguagePicker/LanguagePicker';
+import { Link, useLocation } from "react-router-dom";
+import { useLanguageContext } from '../../contexts/LanguageContext';
+import React from 'react';
 
 const HEADER_HEIGHT = rem(60);
 
@@ -95,28 +98,34 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface HeaderResponsiveProps {
-  links: { link: string; label: string }[];
+  links: { link: string; label: string; labelFr: string; }[];
 }
 
 export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
+  const { selectedLabel } = useLanguageContext();
 
+  const location = useLocation();
   const items = links.map((link) => (
-    <a
+    <Link
       key={link.label}
-      href={link.link}
+      to={link.link}
       className={cx(classes.link, { [classes.linkActive]: active === link.link })}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
+      onClick={() => {
         close();
       }}
     >
-      {link.label}
-    </a>
+      {selectedLabel === 'Fr' ? link.labelFr : link.label}
+    </Link>
   ));
+
+
+  React.useEffect(() => {
+    setActive(location.pathname);
+  }, [location.pathname]);
+  
 
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
