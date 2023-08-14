@@ -7,15 +7,20 @@ import { useLanguageContext } from './contexts/LanguageContext';
 import LandingPage from './routes/landingPage';
 import RoomsPage from './routes/roomsPage';
 import ErrorPage from './routes/errorPage';
-import { createBrowserRouter, RouterProvider, } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import ContactFaqPage from './routes/contactFaqPage';
 import BookingPage from './routes/bookingPage';
 
+
 const router = createBrowserRouter([
+  {
+    path: "/*",
+    element: <Navigate to="/en" replace />,
+    errorElement: <ErrorPage />
+  },
   {
     path: "/en",
     element: <LandingPage />,
-    errorElement: <ErrorPage />
   },
   {
     path: "/fr",
