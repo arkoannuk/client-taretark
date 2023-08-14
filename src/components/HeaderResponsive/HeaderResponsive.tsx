@@ -12,7 +12,7 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantine/ds';
 import { LanguagePicker } from '../LanguagePicker/LanguagePicker';
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useLanguageContext } from '../../contexts/LanguageContext';
 import React from 'react';
 
@@ -102,7 +102,7 @@ interface HeaderResponsiveProps {
 }
 
 export function HeaderResponsive({ links }: HeaderResponsiveProps) {
-  const [opened, { toggle, close }] = useDisclosure(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
   const { selectedLabel } = useLanguageContext();
@@ -119,7 +119,6 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
         to={modifiedLink}
         className={cx(classes.link, { [classes.linkActive]: active === modifiedLink })}
         onClick={() => {
-          //close();
         }}
       >
         {selectedLabel === 'Fr' ? link.labelFr : link.label}
