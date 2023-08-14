@@ -3,6 +3,7 @@ import { createStyles, UnstyledButton, Menu, Image, Group, rem } from '@mantine/
 import { IconChevronDown } from '@tabler/icons-react';
 import images from './images';
 import { useLanguageContext } from '../../contexts/LanguageContext';
+import { useNavigate } from 'react-router-dom';
 
 const data = [
   { label: 'En', image: images.english },
@@ -54,19 +55,35 @@ export function LanguagePicker() {
   const { setSelectedLabel } = useLanguageContext();
   const { selectedLabel } = useLanguageContext();
   const [selected, setSelected] = useState(data[0]);
-  
+  const navigate = useNavigate(); // Initialize useHistory
+
   useEffect(() => {
     const selectedItem = data.find(item => item.label === selectedLabel);
     if (selectedItem) {
       setSelected(selectedItem);
     }
-  }, [selectedLabel]);
+    
+    // Update selected language and label based on URL pathname
+    const urlLang = location.pathname.startsWith('/fr') ? 'Fr' : 'En';
+    const selectedLang = data.find(item => item.label === urlLang);
+    if (selectedLang) {
+      setSelected(selectedLang);
+      setSelectedLabel(urlLang); // Update selected label as well
+    }
+  }, [selectedLabel, location.pathname]);
 
   const items = data.map((item) => (
     <Menu.Item
       icon={<Image src={item.image} width={20} height={20} />}
       onClick={() => {
         setSelected(item);
+
+        if (item.label === 'Fr') {
+          navigate(window.location.pathname.replace(`/en`, '/fr'));
+        } else {
+          navigate(window.location.pathname.replace(`/fr`, '/en'));
+        }
+
         setSelectedLabel(item.label);
       }}
       key={item.label}
