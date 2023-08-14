@@ -9,16 +9,16 @@ export function LeadGrid() {
   return (
     <Container size="lg" pb={0} pt={0}>
       <SimpleGrid cols={2} spacing="md" breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
-         <Image src='./image2.jpg' alt='Random image' height={PRIMARY_COL_HEIGHT} radius="md" />
+         <Image src='https://images.pexels.com/photos/3060930/pexels-photo-3060930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='Random image' height={PRIMARY_COL_HEIGHT} radius="md" />
         <Grid gutter="md">
           <Grid.Col>
-             <Image src='./image3.jpg' alt='Random image' height={SECONDARY_COL_HEIGHT} radius="md" />
+             <Image src='https://images.pexels.com/photos/3060930/pexels-photo-3060930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='Random image' height={SECONDARY_COL_HEIGHT} radius="md" />
           </Grid.Col>
           <Grid.Col span={6}>
-             <Image src='./image4.jpg' alt='Random image' height={SECONDARY_COL_HEIGHT} radius="md" />
+             <Image src='https://images.pexels.com/photos/3060930/pexels-photo-3060930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='Random image' height={SECONDARY_COL_HEIGHT} radius="md" />
           </Grid.Col>
           <Grid.Col span={6}>
-             <Image src='./image1.jpg'  alt='Random image' height={SECONDARY_COL_HEIGHT} radius="md" />
+             <Image src='https://images.pexels.com/photos/3060930/pexels-photo-3060930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'  alt='Random image' height={SECONDARY_COL_HEIGHT} radius="md" />
           </Grid.Col>
         </Grid>
       </SimpleGrid>
