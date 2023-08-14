@@ -13,20 +13,36 @@ import BookingPage from './routes/bookingPage';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/en",
     element: <LandingPage />,
     errorElement: <ErrorPage />
   },
   {
-    path: "/rooms",
+    path: "/fr",
+    element: <LandingPage />,
+  },
+  {
+    path: "/en/rooms",
     element: <RoomsPage />,
   },
   {
-    path: "/booking",
+    path: "/fr/rooms",
+    element: <RoomsPage />,
+  },
+  {
+    path: "/en/booking",
     element: <BookingPage />,
   },
   {
-    path: "/contact-faq",
+    path: "/fr/booking",
+    element: <BookingPage />,
+  },
+  {
+    path: "/en/contact-faq",
+    element: <ContactFaqPage />,
+  },
+  {
+    path: "/fr/contact-faq",
     element: <ContactFaqPage />,
   },
 ]);

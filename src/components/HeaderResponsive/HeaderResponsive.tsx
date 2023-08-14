@@ -12,7 +12,7 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantine/ds';
 import { LanguagePicker } from '../LanguagePicker/LanguagePicker';
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useLanguageContext } from '../../contexts/LanguageContext';
 import React from 'react';
 
@@ -108,24 +108,29 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const { selectedLabel } = useLanguageContext();
 
   const location = useLocation();
-  const items = links.map((link) => (
-    <Link
-      key={link.label}
-      to={link.link}
-      className={cx(classes.link, { [classes.linkActive]: active === link.link })}
-      onClick={() => {
-        close();
-      }}
-    >
-      {selectedLabel === 'Fr' ? link.labelFr : link.label}
-    </Link>
-  ));
-
+  const items = links.map((link) => {
+    const modifiedLink = selectedLabel === 'Fr'
+      ? link.link.replace('/en', '/fr')
+      : link.link.replace('/fr', '/en');
+  
+    return (
+      <Link
+        key={link.label}
+        to={modifiedLink}
+        className={cx(classes.link, { [classes.linkActive]: active === modifiedLink })}
+        onClick={() => {
+          //close();
+        }}
+      >
+        {selectedLabel === 'Fr' ? link.labelFr : link.label}
+      </Link>
+    );
+  });
 
   React.useEffect(() => {
+    console.log(location.pathname)
     setActive(location.pathname);
   }, [location.pathname]);
-  
 
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
@@ -136,7 +141,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
             {items}
           </Group>
           <LanguagePicker />
-          <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" ml='0.5rem'/>
+          <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" ml='0.5rem' />
         </div>
 
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
