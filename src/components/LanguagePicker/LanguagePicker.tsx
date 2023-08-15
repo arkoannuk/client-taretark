@@ -6,8 +6,8 @@ import { useLanguageContext } from '../../contexts/LanguageContext';
 import { useNavigate } from 'react-router-dom';
 
 const data = [
+  { label: 'Ee', image: images.estonia },
   { label: 'En', image: images.english },
-  { label: 'Fr', image: images.french },
 ];
 
 const useStyles = createStyles((theme, { opened }: { opened: boolean }) => ({
@@ -64,7 +64,7 @@ export function LanguagePicker() {
     }
     
     // Update selected language and label based on URL pathname
-    const urlLang = location.pathname.startsWith('/fr') ? 'Fr' : 'En';
+    const urlLang = location.pathname.startsWith('/en') ? 'En' : 'Ee';
     const selectedLang = data.find(item => item.label === urlLang);
     if (selectedLang) {
       setSelected(selectedLang);
@@ -78,10 +78,10 @@ export function LanguagePicker() {
       onClick={() => {
         setSelected(item);
 
-        if (item.label === 'Fr') {
-          navigate(window.location.pathname.replace(`/en`, '/fr'));
+        if (item.label === 'En') {
+          navigate(window.location.pathname.replace(`/ee`, '/en'));
         } else {
-          navigate(window.location.pathname.replace(`/fr`, '/en'));
+          navigate(window.location.pathname.replace(`/en`, '/ee'));
         }
 
         setSelectedLabel(item.label);

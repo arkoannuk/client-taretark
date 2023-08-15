@@ -98,7 +98,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface HeaderResponsiveProps {
-  links: { link: string; label: string; labelFr: string; }[];
+  links: { link: string; label: string; labelEn: string; }[];
 }
 
 export function HeaderResponsive({ links }: HeaderResponsiveProps) {
@@ -109,9 +109,9 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
 
   const location = useLocation();
   const items = links.map((link) => {
-    const modifiedLink = selectedLabel === 'Fr'
-      ? link.link.replace('/en', '/fr')
-      : link.link.replace('/fr', '/en');
+    const modifiedLink = selectedLabel === 'En'
+      ? link.link.replace('/ee', '/en')
+      : link.link.replace('/en', '/ee');
   
     return (
       <Link
@@ -121,7 +121,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
         onClick={() => {
         }}
       >
-        {selectedLabel === 'Fr' ? link.labelFr : link.label}
+        {selectedLabel === 'En' ? link.labelEn : link.label}
       </Link>
     );
   });

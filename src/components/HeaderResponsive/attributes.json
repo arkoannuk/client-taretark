@@ -14,11 +14,31 @@
   ],
   "props": {
     "links": [
-      { "link": "/en", "label": "Home", "labelFr": "Maison"  },
-      { "link": "/en/rooms", "label": "Rooms", "labelFr": "Pièces"  },
-      { "link": "/en/booking", "label": "Booking", "labelFr": "Réservation"  },
-      { "link": "/en/contact-faq", "label": "Contact & FAQ", "labelFr": "Contactez & FAQ"  },
-      { "link": "/en/error", "label": "Error", "labelFr": "Erreur" }
+      {
+        "link": "/ee/broneeri",
+        "label": "Broneeri",
+        "labelEn": "Booking"
+      },
+      {
+        "link": "/ee/puhkemaja",
+        "label": "• Puhkemaja",
+        "labelEn": "• Holiday Home"
+      },
+      {
+        "link": "/ee/stuudio-korter",
+        "label": "• Stuudio Korter",
+        "labelEn": "• Studio Flat"
+      },
+      {
+        "link": "/ee/kamping",
+        "label": "• Kämping",
+        "labelEn": "• Cabin"
+      },
+      {
+        "link": "/ee/kontakt-kkk",
+        "label": "Kontakt & KKK",
+        "labelEn": "Contact & FAQ"
+      }
     ]
   },
   "canvas": {

@@ -15,39 +15,55 @@ import BookingPage from './routes/bookingPage';
 const router = createBrowserRouter([
   {
     path: "/*",
-    element: <Navigate to="/en" replace />,
+    element: <Navigate to="/ee" replace />,
     errorElement: <ErrorPage />
+  },
+  {
+    path: "/ee",
+    element: <LandingPage />,
   },
   {
     path: "/en",
     element: <LandingPage />,
   },
   {
-    path: "/fr",
-    element: <LandingPage />,
-  },
-  {
-    path: "/en/rooms",
+    path: "/ee/broneeri",
     element: <RoomsPage />,
   },
   {
-    path: "/fr/rooms",
+    path: "/en/broneeri",
     element: <RoomsPage />,
   },
   {
-    path: "/en/booking",
+    path: "/ee/puhkemaja",
     element: <BookingPage />,
   },
   {
-    path: "/fr/booking",
+    path: "/en/puhkemaja",
     element: <BookingPage />,
   },
   {
-    path: "/en/contact-faq",
+    path: "/ee/stuudio-korter",
     element: <ContactFaqPage />,
   },
   {
-    path: "/fr/contact-faq",
+    path: "/en/stuudio-korter",
+    element: <ContactFaqPage />,
+  },
+  {
+    path: "/ee/kamping",
+    element: <BookingPage />,
+  },
+  {
+    path: "/en/kamping",
+    element: <BookingPage />,
+  },
+  {
+    path: "/ee/kontakt-kkk",
+    element: <ContactFaqPage />,
+  },
+  {
+    path: "/en/kontakt-kkk",
     element: <ContactFaqPage />,
   },
 ]);
