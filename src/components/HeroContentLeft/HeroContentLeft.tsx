@@ -73,9 +73,10 @@ export function HeroContentLeft() {
         zIndex={0}
       />
       <Container size="lg" className={classes.container}>
-        <Title className={classes.title}><FormattedMessage
+        <Title className={classes.title}>
+          <FormattedMessage
             id="heroContentLeft-title"
-            defaultMessage="Accommodation in Elva"
+            defaultMessage="Majutus Elvas"
           />
         </Title>
         <Text className={classes.description} size="xl" mt="xl">

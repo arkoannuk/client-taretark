@@ -91,7 +91,7 @@ export function EmailBanner() {
               <Text fw={900} fz="xl" mb={5}>
                 <FormattedMessage
                   id="emailBanner-header"
-                  defaultMessage="Subscribe to our Newsletter!"
+                  defaultMessage="Tellige Meie Uudiskiri!"
                 />
               </Text>
               <Text fz="sm" c="dimmed">

@@ -1,7 +1,7 @@
 import MantineThemeProvider from './theme';
 
 import messages_en from "../compiled-lang/en.json";
-import messages_fr from "../compiled-lang/fr.json";
+import messages_ee from "../compiled-lang/ee.json";
 import { IntlProvider } from 'react-intl';
 import { useLanguageContext } from './contexts/LanguageContext';
 import LandingPage from './routes/landingPage';
@@ -69,13 +69,13 @@ const router = createBrowserRouter([
 ]);
 
 const messages = {
-  'En': messages_en,
-  'Fr': messages_fr
+  'Ee': messages_ee,
+  'En': messages_en
 };
 
 function App() {
   const { selectedLabel } = useLanguageContext();
-  const translatedMessages = messages[selectedLabel as 'En' | 'Fr'];
+  const translatedMessages = messages[selectedLabel as 'Ee' | 'En'];
 
   return (
     <IntlProvider locale={navigator.language} messages={translatedMessages}>
