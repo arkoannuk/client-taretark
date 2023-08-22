@@ -112,7 +112,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
     const modifiedLink = selectedLabel === 'En'
       ? link.link.replace('/ee', '/en')
       : link.link.replace('/en', '/ee');
-  
+
     return (
       <Link
         key={link.label}
@@ -127,14 +127,17 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   });
 
   React.useEffect(() => {
-    console.log(location.pathname)
     setActive(location.pathname);
   }, [location.pathname]);
+
+  const modifiedLogoLink = selectedLabel === 'En' ? '/en' : '/ee';
 
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container fluid className={classes.header}>
-        <MantineLogo size={28} />
+        <Link to={modifiedLogoLink} className={classes.wrapper}>
+          <MantineLogo size={28} />
+        </Link>
         <div className={classes.wrapper}>
           <Group spacing={5} className={classes.links}>
             {items}
