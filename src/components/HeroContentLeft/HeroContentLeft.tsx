@@ -85,7 +85,7 @@ export function HeroContentLeft() {
           <br></br>Welcome to TareTark.
         </Text>
 
-        <Button variant="gradient" size="xl" className={classes.control}>
+        <Button variant="gradient" radius='md' size="xl" className={classes.control}>
           View Rooms
         </Button>
       </Container>

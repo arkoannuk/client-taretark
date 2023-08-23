@@ -3,7 +3,7 @@ import { ServicePuhkemaja } from './Services/ServicePuhkemaja';
 
 const useStyles = createStyles((theme) => ({
     container: {
-        paddingBottom: `calc(${theme.spacing.xl} * 3)`,
+        paddingBottom: `calc(${theme.spacing.xl} * 1)`,
         paddingTop: `calc(${theme.spacing.xl} * 3)`,
         [theme.fn.smallerThan('md')]: {
         },
@@ -31,7 +31,7 @@ export function ServicesWrapper() {
 
     return (
         <Container size="lg" className={classes.container}>
-            <Title align='center' className={classes.title}>Tutvuge võimalustega!</Title>
+            <Title align='center' className={classes.title}>Tutvu võimalustega!</Title>
             <Grid>
                 <Grid.Col md={4} sm={12} xs={12}><ServicePuhkemaja /></Grid.Col>
                 <Grid.Col md={4} sm={6} xs={12}><ServicePuhkemaja /></Grid.Col>
