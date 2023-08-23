@@ -9,12 +9,15 @@ import { LeadGrid } from "../components/LeadGrid/LeadGrid";
 import headerAttributes from '../components/HeaderResponsive/attributes.json';
 import featureAttributes from '../components/FeaturesImages/attributes.json';
 import footerAttributes from '../components/FooterLinks/attributes.json';
+import { ServicesPreview } from "../components/ServicesPreview/Services/ServicePuhkemaja";
+import { ServicesWrapper } from "../components/ServicesPreview/ServicesWrapper";
 
 function LandingPage() {
     return (
         <>
             <HeaderResponsive links={headerAttributes.props.links} />
             <HeroContentLeft />
+            <ServicesWrapper />
             <FeaturesImages supTitle={featureAttributes.props.supTitle} description={featureAttributes.props.description} data={featureAttributes.props.data} />
             <LeadGrid />
             <CardsCarousel />
