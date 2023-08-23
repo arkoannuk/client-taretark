@@ -1,5 +1,4 @@
-import { createStyles, Container, Overlay, rem, Grid, SimpleGrid, Title } from '@mantine/core';
-import { FormattedMessage } from 'react-intl';
+import { createStyles, Container, rem, Grid, Title } from '@mantine/core';
 import { ServicePuhkemaja } from './Services/ServicePuhkemaja';
 
 const useStyles = createStyles((theme) => ({
