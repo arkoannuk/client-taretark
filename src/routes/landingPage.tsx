@@ -7,6 +7,7 @@ import { ServicesWrapper } from "../components/ServicesPreview/ServicesWrapper";
 import { ValueProp1 } from "../components/ValueProp1/ValueProp1";
 import { ValueProp2 } from "../components/ValueProp2/ValueProp2";
 import { CardsCarousel } from "../components/CardsCarousel/CardsCarousel";
+import { ActionCall } from "../components/ActionCall/ActionCall";
 
 function LandingPage() {
     return (
@@ -17,6 +18,7 @@ function LandingPage() {
             <ValueProp1 />
             <ValueProp2 />
             <CardsCarousel />
+            <ActionCall />
             <FooterLinks data={footerAttributes.props.data} />
         </>
     );

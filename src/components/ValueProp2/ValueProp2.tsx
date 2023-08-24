@@ -84,7 +84,7 @@ export function ValueProp2() {
       <Container fluid className={classes.topWrapper}>
         <Container size="lg" className={classes.container}>
           <div className={classes.inner}>
-            <Image src='https://images.pexels.com/photos/3060930/pexels-photo-3060930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='Random image' radius="md" className={classes.image} />
+            <Image src='https://res.cloudinary.com/dgjfea9cb/image/upload/v1692889072/photo-1543269664-56d93c1b41a6_1_kfsvvu.jpg' alt='Random image' radius="md" className={classes.image} />
             <div className={classes.content}>
               <Title className={classes.title}>
                 Murevaba igal sammul

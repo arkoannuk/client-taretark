@@ -116,7 +116,7 @@ export function ValueProp1() {
                 </List.Item>
               </List>
             </div>
-            <Image src='https://images.pexels.com/photos/3060930/pexels-photo-3060930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='Random image' radius="md" className={classes.image} />
+            <Image src='https://images.unsplash.com/photo-1440013152285-4af9cff35d94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1168&q=80' alt='Random image' radius="md" className={classes.image} />
           </div>
         </Container>
       </Container>

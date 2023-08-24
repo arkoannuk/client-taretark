@@ -71,7 +71,7 @@ export function ServicePuhkemaja() {
 
       <Group position="apart" mt="lg">
         <Text fw={500} fz="lg">
-          Forde, Norway
+          Puhkemaja
         </Text>
 
         <Group spacing={5}>
@@ -98,7 +98,7 @@ export function ServicePuhkemaja() {
           </Text>
         </div>
 
-        <Button radius="md">Book now</Button>
+        <Button radius="md">Vaata lähemalt</Button>
       </Group>
     </Card>
   );

@@ -84,7 +84,7 @@ export function HeroContentLeft() {
         </Text>
 
         <Button variant="gradient" radius='md' size="xl" className={classes.control}>
-          View Rooms
+          Broneeri
         </Button>
       </Container>
     </div>
