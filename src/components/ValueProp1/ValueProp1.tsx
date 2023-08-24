@@ -14,7 +14,7 @@ const useStyles = createStyles((theme) => ({
   topWrapper: {
     padding: 0,
     marginTop: rem(50),
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[1],
     // borderTop: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]}`,
   },
 
@@ -98,7 +98,7 @@ export function ValueProp1() {
                 size="sm"
                 icon={
                   <ThemeIcon size={20} radius="xl">
-                    <IconCheck size={rem(12)} stroke={1.5} />
+                    <IconCheck size={rem(12)} stroke={3.5} />
                   </ThemeIcon>
                 }
               >

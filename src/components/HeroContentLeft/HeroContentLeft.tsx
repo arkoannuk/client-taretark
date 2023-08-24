@@ -38,7 +38,7 @@ const useStyles = createStyles((theme) => ({
     },
 
     [theme.fn.smallerThan('xs')]: {
-      fontSize: rem(28),
+      fontSize: rem(32),
       lineHeight: 1.3,
     },
   },
@@ -80,9 +80,7 @@ export function HeroContentLeft() {
           />
         </Title>
         <Text className={classes.description} size="xl" mt="xl">
-          Create lasting memories and experience Estonian hospitality. Make new connections, and feel at home away from home.
-          Book now to embark on a journey of  exploration.
-          <br></br>Welcome to TareTark.
+           Meeldejääva puhkuse või öömajana on saadaval erinevate võimalustega ruumid ja saunad, mis on ümbritsetud meelerahu pakkuva loodusega.   
         </Text>
 
         <Button variant="gradient" radius='md' size="xl" className={classes.control}>

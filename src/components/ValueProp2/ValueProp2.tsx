@@ -12,8 +12,8 @@ const useStyles = createStyles((theme) => ({
   topWrapper: {
     padding: 0,
     // marginTop: rem(50),
-    marginBottom: rem(500),
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+    //marginBottom: rem(500),
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[1],
     // borderTop: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]}`,
   },
 

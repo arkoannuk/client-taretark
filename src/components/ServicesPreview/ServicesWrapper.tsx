@@ -20,7 +20,7 @@ const useStyles = createStyles((theme) => ({
         },
 
         [theme.fn.smallerThan('xs')]: {
-            fontSize: rem(24),
+            fontSize: rem(28),
             lineHeight: 1.3,
         },
     },
