@@ -53,20 +53,21 @@ export function ActionCall() {
   return (
 
     <Container size="lg" className={classes.container}>
-      <Paper withBorder className={classes.card} radius="md">
+      <Paper className={classes.card} radius="md">
         <BackgroundImage
           src="https://res.cloudinary.com/dgjfea9cb/image/upload/v1692889068/Group_5_xxervd.jpg"
           radius="md"
           className={classes.image}
         >
           <Flex direction='column' align='center'>
-            <Title align='center' className={classes.title}>Parim majutus Elvas teie käsutuses</Title>
+            <Title align='center' className={classes.title}>Parim majutus Elvas teie käsutusse</Title>
             <Button variant="gradient" radius='md' size="xl" className={classes.control}>
               Broneeri
             </Button>
           </Flex>
         </BackgroundImage>
       </Paper>
+      
 
 
     </Container>

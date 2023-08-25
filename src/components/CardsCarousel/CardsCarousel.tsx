@@ -16,7 +16,7 @@ const useStyles = createStyles((theme) => ({
   // },
 
   card: {
-    height: rem(240),
+    height: rem(270),
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -24,6 +24,7 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan('md')]: {
       height: rem(320),
     },
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[1],
   },
 
   title: {
@@ -85,7 +86,7 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan('sm')]: {
       gap: '1rem',
       marginTop: '1rem',
-      marginBottom: '1rem',
+      marginBottom: '3rem',
     },
   },
 
@@ -111,7 +112,7 @@ function Card({ title, category }: CardProps) {
   return (
     <Paper
       className={classes.card}
-    // withBorder
+    //withBorder
     >
       <div>
         <Text ml={0} className={classes.category} size="xs">
@@ -194,8 +195,8 @@ export function CardsCarousel() {
       <Carousel
         className={classes.carousel}
         controlsOffset="xs"
-        slideSize="33.33%"
-        breakpoints={[{ maxWidth: 'lg', slideSize: '50%', slideGap: "xs" }, { maxWidth: 'sm', slideSize: '100%', slideGap: rem(0) }]}
+        slideSize="32.4%"
+        breakpoints={[{ maxWidth: 'lg', slideSize: '48.7%', slideGap: "xs" }, { maxWidth: 'sm', slideSize: '100%', slideGap: rem(0) }]}
         slideGap="xs"
         align="center"
         slidesToScroll={mobile ? 1 : (tablet ? 2 : 3)}
