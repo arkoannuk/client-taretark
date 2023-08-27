@@ -1,11 +1,10 @@
   .leaflet-container {
     margin-top: 20px;
-    width: 92vw;
+    width: calc(100vw - 32px);
     height: 34.5vh;
-    width: 550px;
-    height: 367px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    max-width: 550px;
+    max-height: 367px;
+    border-radius: 0.5rem;
   }
 
   .leaflet-div-icon {

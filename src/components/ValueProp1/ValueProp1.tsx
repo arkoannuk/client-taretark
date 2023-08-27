@@ -8,7 +8,6 @@ import {
   ThemeIcon,
   rem,
 } from '@mantine/core';
-import { IconCheck } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   topWrapper: {

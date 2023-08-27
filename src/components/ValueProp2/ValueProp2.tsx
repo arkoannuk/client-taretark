@@ -9,6 +9,8 @@ import {
   Flex,
   List,
   ThemeIcon,
+  Paper,
+  px,
 } from '@mantine/core';
 import { Leaflet } from '../../Leaflet/Leaflet';
 import { IconBus, IconCircleCheck, IconCircleDashed, IconMapPin, IconMapPinFilled, IconShoppingCart, IconTrain } from '@tabler/icons-react';
@@ -67,7 +69,9 @@ const useStyles = createStyles((theme) => ({
   },
 
   image: {
-    maxWidth: rem(550),
+    width: rem(550),
+    height: rem(367),
+    backgroundColor: 'red',
     [theme.fn.smallerThan('md')]: {
       marginTop: rem(30),
 
