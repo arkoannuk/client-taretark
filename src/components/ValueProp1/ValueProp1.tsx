@@ -94,25 +94,26 @@ export function ValueProp1() {
               </Text>
               <List
                 mt={rem(30)}
-                spacing="sm"
+                spacing="md"
                 size="sm"
+  center
                 icon={
-                  <ThemeIcon size={20} radius="xl">
-                    <IconCheck size={rem(12)} stroke={3.5} />
+                  <ThemeIcon size={9} radius="xl">
+                    {/* <IconCheck size={rem(12)} stroke={3.5} /> */}
                   </ThemeIcon>
                 }
               >
                 <List.Item>
-                  <b>Avatud Aed</b> – build type safe applications, all components and hooks
-                  export types
+                  <b>Avatud aed</b> – kus leidub siiski igale grupile oma privaatne nurgake
                 </List.Item>
                 <List.Item>
-                  <b>Grillmaja</b> – all packages have MIT license, you can use Mantine in
-                  any project
+                  <b>Grillmaja</b> – tasuta kasutamiseks eelbroneeringu alusel
                 </List.Item>
                 <List.Item>
-                  <b>Saunad</b> – focus ring will appear only when user navigates with
-                  keyboard
+                  <b>Saunad</b> – kohapeal on saadaval tava- ja tünnisauna teenused
+                </List.Item>
+                <List.Item>
+                  <b>Isiklik vastuvõtt</b> – esmasel saabumisel tutvustame põgusalt majutusala
                 </List.Item>
               </List>
             </div>

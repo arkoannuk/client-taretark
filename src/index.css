@@ -1,0 +1,19 @@
+  .leaflet-container {
+    margin-top: 20px;
+    width: 92vw;
+    height: 34.5vh;
+    width: 550px;
+    height: 367px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .leaflet-div-icon {
+    background: transparent;
+    border: none;
+  }
+
+  
+  .leaflet-marker-icon {
+    filter: hue-rotate(300deg)
+  }

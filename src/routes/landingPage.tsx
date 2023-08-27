@@ -8,6 +8,8 @@ import { ValueProp1 } from "../components/ValueProp1/ValueProp1";
 import { ValueProp2 } from "../components/ValueProp2/ValueProp2";
 import { CardsCarousel } from "../components/CardsCarousel/CardsCarousel";
 import { ActionCall } from "../components/ActionCall/ActionCall";
+import { Leaflet } from "../Leaflet/Leaflet";
+import { ValueProp3 } from "../components/ValueProp3/ValueProp3";
 
 function LandingPage() {
     return (
@@ -17,9 +19,11 @@ function LandingPage() {
             <ServicesWrapper />
             <ValueProp1 />
             <ValueProp2 />
+            <ValueProp3 />
             <CardsCarousel />
             <ActionCall />
             <FooterLinks data={footerAttributes.props.data} />
+            {/* <Leaflet /> */}
         </>
     );
 }

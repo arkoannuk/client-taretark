@@ -6,7 +6,12 @@ import {
   Button,
   Text,
   rem,
+  Flex,
+  List,
+  ThemeIcon,
 } from '@mantine/core';
+import { Leaflet } from '../../Leaflet/Leaflet';
+import { IconBus, IconCircleCheck, IconCircleDashed, IconMapPin, IconMapPinFilled, IconShoppingCart, IconTrain } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   topWrapper: {
@@ -24,7 +29,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     paddingTop: `calc(${theme.spacing.xl} * 4)`,
-    paddingBottom: `calc(${theme.spacing.xl} * 4)`,
+    paddingBottom: `calc(${theme.spacing.xl} * 1)`,
 
     [theme.fn.smallerThan('md')]: {
       // display: 'grid',
@@ -84,19 +89,55 @@ export function ValueProp2() {
       <Container fluid className={classes.topWrapper}>
         <Container size="lg" className={classes.container}>
           <div className={classes.inner}>
-            <Image src='https://res.cloudinary.com/dgjfea9cb/image/upload/v1692889072/photo-1543269664-56d93c1b41a6_1_kfsvvu.jpg' alt='Random image' radius="md" className={classes.image} />
+            <Leaflet />
             <div className={classes.content}>
-              <Title className={classes.title}>
-                Murevaba igal sammul
+              <Title className={classes.title} mb="md">
+                Hästi ühendatud asukoht
               </Title>
-              <Text mt="md">
-                Ööbijatele klienditugi kättesaadaval 24/7 
+
+              <Text mt="md" mb="md">
+                Meie juurde pääseb lihtsalt nii auto kui ka ühistranspordiga, kõndimiskaugusele jäävad toidupoed ja restoranid.
               </Text>
-              <Text color="dimmed" mt="md">
-                Juhul kui tekivad küsimused või probleemid, oleme alati valmis neile vastuse leidma. Seda nii telefoni teel kui ka kohapeal.
+
+
+              <List spacing="xs" size="sm" center >
+                <List.Item
+                  icon={
+                    <ThemeIcon color="teal" size="lg" radius="xl">
+                      <IconShoppingCart size="1.5rem" />
+                    </ThemeIcon>
+                  }
+                >
+                  Lähim toidupood <b>500m</b></List.Item>
+                <List.Item
+                  icon={
+                    <ThemeIcon size="lg" radius="xl">
+                      <IconBus size="1.5rem" />
+                    </ThemeIcon>
+                  }
+                >
+                  Lähim bussipeatus <b>1km</b></List.Item>
+                <List.Item
+                  icon={
+                    <ThemeIcon size="lg" radius="xl">
+                      <IconTrain size="1.5rem" />
+                    </ThemeIcon>
+                  }
+                >
+                  Elva raudteejaam <b>2km</b>
+                </List.Item>
+              </List>
+
+              <Text mt="md" color='dimmed'>
+                Kaardil on märgistatud olulisemad rajatised.
               </Text>
+
+
               <Button radius="md" size="md" className={classes.control}>
-                Kontakt & KKK
+                <Flex gap="xs" justify="" align="center"
+                >
+                  <IconMapPinFilled /> Juhised
+                </Flex>
               </Button>
             </div>
           </div>
