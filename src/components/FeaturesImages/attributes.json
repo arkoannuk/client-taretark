@@ -1,0 +1,45 @@
+{
+  "title": "Features with image icons",
+  "category": "features",
+  "author": "rtivital",
+  "responsive": true,
+  "withColor": true,
+  "dependencies": [
+    "/core/theme-icon/",
+    "/core/title/",
+    "/core/text/",
+    "/core/container/",
+    "/core/simple-grid/",
+    "/core/image/",
+    "https://www.flaticon.com/"
+  ],
+  "props": {
+    "supTitle": "SINCE 2020",
+    "description": "Immerse yourself in nature's embrace, rejuvenating your soul and amplifying inner peace. Enhance your well-being through optional recreational activities, revitalizing your body and mind. Bring along your partner or cherished friends to share this extraordinary experience.",
+    "data": [
+      {
+        "image": "auditors",
+        "title": "Sauna & Hot Tub",
+        "description": "Azurill can be seen bouncing and playing on its big, rubbery tail"
+      },
+      {
+        "image": "lawyers",
+        "title": "BBQ",
+        "description": "Fans obsess over the particular length and angle of its arms"
+      },
+      {
+        "image": "accountants",
+        "title": "Host Greets You",
+        "description": "They divvy up their prey evenly among the members of their pack"
+      },
+      {
+        "image": "others",
+        "title": "Others",
+        "description": "Private parking, firepit, shower ammenities, wifi"
+      }
+    ]
+  },
+  "canvas": {
+    "center": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Footer with links",
+  "category": "footers",
+  "author": "rtivital",
+  "responsive": true,
+  "dependencies": ["/core/text/", "/core/container/", "/core/action-icon/", "@tabler/icons-react"],
+  "props": {
+    "data": [
+      {
+        "title": "Üldine",
+        "links": [
+          { "label": "Broneeri", "link": "#" },
+          { "label": "Kontakt & KKK", "link": "#" },
+          { "label": "Avaleht", "link": "#" }
+        ]
+      },
+      {
+        "title": "Hooned",
+        "links": [
+          { "label": "Puhkemaja", "link": "#" },
+          { "label": "Stuudio korter", "link": "#" },
+          { "label": "Kämping", "link": "#" }
+        ]
+      }
+    ]
+  },
+  "canvas": {
+    "center": false
+  }
+}

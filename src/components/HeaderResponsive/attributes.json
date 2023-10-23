@@ -1,0 +1,47 @@
+{
+  "title": "Responsive header",
+  "category": "headers",
+  "author": "rtivital",
+  "withColor": true,
+  "responsive": true,
+  "dependencies": [
+    "/core/app-shell/",
+    "/core/container/",
+    "/core/group/",
+    "/core/burger/",
+    "/core/paper/",
+    "/core/transition/"
+  ],
+  "props": {
+    "links": [
+      {
+        "link": "/ee/broneeri",
+        "label": "Broneeri",
+        "labelEn": "Booking"
+      },
+      {
+        "link": "/ee/puhkemaja",
+        "label": "• Puhkemaja",
+        "labelEn": "• Holiday Home"
+      },
+      {
+        "link": "/ee/stuudio-korter",
+        "label": "• Stuudio korter",
+        "labelEn": "• Studio Flat"
+      },
+      {
+        "link": "/ee/kamping",
+        "label": "• Kämping",
+        "labelEn": "• Cabin"
+      },
+      {
+        "link": "/ee/kontakt-kkk",
+        "label": "Kontakt & KKK",
+        "labelEn": "Contact & FAQ"
+      }
+    ]
+  },
+  "canvas": {
+    "center": false
+  }
+}
