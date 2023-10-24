@@ -1,5 +1,5 @@
-# TareTark Project
-[taretark.netlify.app/](taretark.netlify.app/)
+# TareTark Project (WIP)
+[https://taretark.netlify.app/ee](https://taretark.netlify.app/ee)
 ## Introduction
 
 This is a website for my jointly ran short-term accommodation business. It aims to showcase available services and enable instant booking. It's an **unfinished project** and at some point I'll most likely **rewrite** it in Nuxt.
